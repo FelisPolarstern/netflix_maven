@@ -1,8 +1,8 @@
-package classes.Database_Import;
+package classes;
 
 public class CountryExport {
-    private Integer country_ID = null;
-    private String country_Code;
+    private final Integer country_ID = null;
+    private final String country_Code;
     private String description;
 
     public CountryExport(String country_Code){
