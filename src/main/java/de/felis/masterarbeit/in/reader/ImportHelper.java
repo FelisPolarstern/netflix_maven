@@ -22,12 +22,6 @@ public class ImportHelper {
         System.out.println(fmt);
         return fmt;
     }
-    static public Instant convertStringToInstant(String ConvertedInstant){
-        // this.customer_creation_timeStamp = Timestamp.valueOf(AccountDetailsImport[9]);
-        Instant temp = Instant.parse(ConvertedInstant);
-        System.out.println(temp);
-        return temp;
-    }
 
     public static List<List<String>> readCsvFile(String path) throws IOException {
         List<String> lines = Files.readAllLines(Paths.get(path));
@@ -77,7 +71,6 @@ public class ImportHelper {
         return Import;
     }
 
-
     static public String toString(String input){
         if (input.isEmpty()){
             return null;
@@ -105,6 +98,27 @@ public class ImportHelper {
         }
     }
 
+    static public Boolean toBoolean(String input){
+        if(input.isEmpty()){
+            return null;
+        }
+        return Boolean.valueOf(input);
+    }
+
+    /* --- Time Formate Transformer --- */
+    static public Instant convertStringToInstant(String ConvertedInstant){
+        // this.customer_creation_timeStamp = Timestamp.valueOf(AccountDetailsImport[9]);
+        Instant temp = Instant.parse(ConvertedInstant);
+        System.out.println(temp);
+        return temp;
+    }
+
+    static public LocalDateTime toLocalDateTime(String input){
+        if(input.matches("\\d\\d\\d\\d-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d")){
+            input = input.replaceAll(" ", "T");
+        }
+        return(LocalDateTime.parse(input));
+    }
     static public LocalDate toLocalDate(String input){
         if(input.isEmpty()){
             return null;}
@@ -127,11 +141,6 @@ public class ImportHelper {
         }
         return(LocalDate.parse(input));
     }
-
-    static public Boolean toBoolean(String input){
-        if(input.isEmpty()){
-            return null;
-        }
-        return Boolean.valueOf(input);
-    }
 }
+
+

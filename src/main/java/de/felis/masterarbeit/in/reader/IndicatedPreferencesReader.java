@@ -14,7 +14,7 @@ public class IndicatedPreferencesReader {
 
         for (List<String> listItem : content) {
             returnVal.add(new IndicatedPreferencesIn(ImportHelper.toString(listItem.get(0)), ImportHelper.toString(listItem.get(1)), ImportHelper.toBoolean(listItem.get(2)),
-                                                    ImportHelper.toBoolean(listItem.get(3)), ImportHelper.toInstant(listItem.get(4))));
+                                                    ImportHelper.toBoolean(listItem.get(3)), ImportHelper.toLocalDate(listItem.get(4))));
         }
         return returnVal;
     }

@@ -22,7 +22,7 @@ public class ClickstreamReader {
 
         for(List<String> listitem: content){
             returnVal.add(new ClickstreamIn(ImportHelper.toString(listitem.get(0)),ImportHelper.toString(listitem.get(1)), ImportHelper.toString(listitem.get(2)),
-                                                ImportHelper.toString(listitem.get(3)), ImportHelper.toString(listitem.get(4)), ImportHelper.toInstant(listitem.get(5))));
+                                                ImportHelper.toString(listitem.get(3)), ImportHelper.toString(listitem.get(4)), ImportHelper.toLocalDateTime(listitem.get(5))));
         }
         return returnVal;
     }

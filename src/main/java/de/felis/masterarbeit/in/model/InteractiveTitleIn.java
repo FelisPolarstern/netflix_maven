@@ -1,6 +1,7 @@
 package de.felis.masterarbeit.in.model;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 public class InteractiveTitleIn {
     private final String profileName;
@@ -9,9 +10,9 @@ public class InteractiveTitleIn {
     private final String choiceSegmentId;
     private final boolean hasWatched;
     private final String source;
-    private final Instant utcTimestamp;
+    private final LocalDateTime utcTimestamp;
 
-    public InteractiveTitleIn(String profileName, String titleDesc, String selectionType, String choiceSegmentId, boolean hasWatched, String source, Instant utcTimestamp) {
+    public InteractiveTitleIn(String profileName, String titleDesc, String selectionType, String choiceSegmentId, boolean hasWatched, String source, LocalDateTime utcTimestamp) {
         this.profileName = profileName;
         this.titleDesc = titleDesc;
         this.selectionType = selectionType;

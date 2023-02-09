@@ -1,5 +1,6 @@
 package de.felis.masterarbeit.in.model;
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 public class ClickstreamIn {
 
@@ -8,9 +9,9 @@ public class ClickstreamIn {
     private final String navigationLevel;
     private final String referrerUrl;
     private final String webpageUrl;
-    private final Instant clickUtcTs;
+    private final LocalDateTime clickUtcTs;
 
-    public ClickstreamIn(String profileName, String source, String navigationLevel, String referrerUrl, String webpageUrl, Instant clickUtcTs) {
+    public ClickstreamIn(String profileName, String source, String navigationLevel, String referrerUrl, String webpageUrl, LocalDateTime clickUtcTs) {
         this.profileName = profileName;
         this.source = source;
         this.navigationLevel = navigationLevel;
