@@ -117,6 +117,10 @@ public class ImportHelper {
         if(input.matches("\\d\\d\\d\\d-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d")){
             input = input.replaceAll(" ", "T");
         }
+        if (input.matches("\\d\\d\\d\\d-\\d\\d-\\d\\d \\d\\d:\\d\\d")){
+            input = input.replaceAll(" ", "T");
+
+        }
         return(LocalDateTime.parse(input));
     }
     static public LocalDate toLocalDate(String input){

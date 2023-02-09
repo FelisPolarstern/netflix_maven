@@ -13,10 +13,17 @@ public class Main {
         DevicesImport testDevices = new DevicesImport("../Daten/Anonymisiert/netflix-report/DEVICES/Devices.csv");
         List <IndicatedPreferencesIn> indicatedPreferencesTest = IndicatedPreferencesReader.readSubscriptionHistoryLis("/Users/nadjajust/Documents/Uni/Master/Masterarbeit/netflix-report/CONTENT_INTERACTION/IndicatedPreferences.csv");
 
+        List <MyListIn> myListTest = MyListReader.readmyList("/Users/nadjajust/Documents/Uni/Master/Masterarbeit/netflix-report/CONTENT_INTERACTION/MyList.csv");
         List<DeviceIn> testDevices = DeviceReader.readDeviceList ("../Daten/Anonymisiert/netflix-report/DEVICES/Devices.csv");
         List<SubscriptionHistoryIn> testSubscriptionHistory = SubstriptionHistoryReader.readSubscriptionHistoryLis("../Daten/Anonymisiert/netflix-report/ACCOUNT/SubscriptionHistory.csv");
+        List <TermsOfUseIn> termsofUseTest = TermsOfUseReader.readSubscriptionDetails("/Users/nadjajust/Documents/Uni/Master/Masterarbeit/netflix-report/ACCOUNT/TermsOfUse.csv");
         */
-        //System.out.println(Locale.forLanguageTag("de-de").getDisplayCountry());
-        List<InteractiveTitleIn> interactiveTitletest = InteractiveTitleReader.readSubscriptionHistoryList("/Users/nadjajust/Documents/Uni/Master/Masterarbeit/netflix-report/CONTENT_INTERACTION/InteractiveTitles.csv");
+
+        /*List<InteractiveTitleIn> interactiveTitletest = InteractiveTitleReader.readInteractiveTitle("/Users/nadjajust/Documents/Uni/Master/Masterarbeit/netflix-report/CONTENT_INTERACTION/InteractiveTitles.csv", 0);
+        List <PlaybackRelatedEventsIn> playbackRelatedEventsTest = PlaybackRelatedEventsReader.readPlaybackRelatedEvents("/Users/nadjajust/Documents/Uni/Master/Masterarbeit/netflix-report/CONTENT_INTERACTION/PlaybackRelatedEvents.csv");
+        ToDo: , wird einmal als Apostroph genutzt
+         */
+
+
     }
 }

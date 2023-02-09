@@ -14,7 +14,7 @@ public class MyListReader {
 
         for (List<String> listItem : content) {
             returnVal.add(new MyListIn(ImportHelper.toString(listItem.get(0)), ImportHelper.toString(listItem.get(1)), ImportHelper.toString(listItem.get(2)),
-                                        ImportHelper.toInstant(listItem.get(3))));
+                                        ImportHelper.toLocalDate(listItem.get(3))));
         }
         return returnVal;
     }

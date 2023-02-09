@@ -21,4 +21,8 @@ public class InteractiveTitleIn {
         this.source = source;
         this.utcTimestamp = utcTimestamp;
     }
+
+    /*public InteractiveTitleIn print() {
+        System.out.println(this.profileName, titleDesc, selectionType, choiceSegmentId, hasWatched, source, utcTimestamp);
+    }*/
 }

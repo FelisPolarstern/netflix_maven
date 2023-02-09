@@ -15,7 +15,7 @@ public class TermsOfUseReader {
         List<TermsOfUseIn> returnVal = new ArrayList<>();
 
         for (List<String> listitem : content) {
-            returnVal.add(new TermsOfUseIn(ImportHelper.toInstant(listitem.get(0))));
+            returnVal.add(new TermsOfUseIn(ImportHelper.toLocalDateTime(listitem.get(0))));
         }
         return returnVal;
     }
