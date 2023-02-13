@@ -145,6 +145,14 @@ public class ImportHelper {
         }
         return(LocalDate.parse(input));
     }
+
+    static public Duration toDuration (String input){
+        if(input.matches("[a-zA-Z]+")){
+            return null;
+        }
+        CharSequence inputChars = input;
+        return Duration.parse(inputChars);
+    }
 }
 
 
