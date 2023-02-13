@@ -15,7 +15,7 @@ public class IpAdressesStreamingReader {
 
         for (List<String> listItem : content) {
             returnVal.add(new IpAdressesStreamingIn(ImportHelper.toString(listItem.get(0)), ImportHelper.toString(listItem.get(1)), ImportHelper.toString(listItem.get(2)),
-                    ImportHelper.toString(listItem.get(3)), ImportHelper.toString(listItem.get(4)), ImportHelper.toInstant(listItem.get(5))));
+                    ImportHelper.toString(listItem.get(3)), ImportHelper.toString(listItem.get(4)), ImportHelper.toLocalDateTime(listItem.get(5))));
         }
         return returnVal;
     }

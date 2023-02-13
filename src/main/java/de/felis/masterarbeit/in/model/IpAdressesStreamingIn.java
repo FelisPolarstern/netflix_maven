@@ -1,6 +1,8 @@
 package de.felis.masterarbeit.in.model;
 
-import java.time.Instant;
+
+
+import java.time.*;
 
 public class IpAdressesStreamingIn {
     private final String esn;
@@ -8,10 +10,10 @@ public class IpAdressesStreamingIn {
     private final String localizedDeviceDescription;
     private final String ip;
     private final String regionCodeDisplayName;
-    private final Instant ts;
+    private final LocalDateTime ts;
 
     public IpAdressesStreamingIn(String esn, String country, String localizedDeviceDescription, String ip,
-                                 String regionCodeDisplayName, Instant ts) {
+                                 String regionCodeDisplayName, LocalDateTime ts) {
         this.esn = esn;
         this.country = country;
         this.localizedDeviceDescription = localizedDeviceDescription;

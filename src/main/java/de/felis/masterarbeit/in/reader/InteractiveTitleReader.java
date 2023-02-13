@@ -8,16 +8,13 @@ import java.util.List;
 
 public class InteractiveTitleReader {
 
-    public static List<InteractiveTitleIn> readInteractiveTitle(String path, int i) throws IOException {
+    public static List<InteractiveTitleIn> readInteractiveTitle(String path) throws IOException {
         List<List<String>> content = ImportHelper.readCsvFile(path);
         List<InteractiveTitleIn> returnVal = new ArrayList<>();
         for (List<String> listItem : content) {
-
-            i++;
             returnVal.add(new InteractiveTitleIn(ImportHelper.toString(listItem.get(0)), ImportHelper.toString(listItem.get(1)), ImportHelper.toString(listItem.get(2)),
                     ImportHelper.toString(listItem.get(3)), ImportHelper.toBoolean(listItem.get(4)), ImportHelper.toString(listItem.get(5)),
                     ImportHelper.toLocalDateTime(listItem.get(6))));
-            System.out.println(returnVal.get(0).toString());
         }
 
         return returnVal;

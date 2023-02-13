@@ -16,8 +16,8 @@ public class SearchHistoryReader {
         for (List<String> listItem : content) {
             returnVal.add(new SearchHistoryIn
                     (ImportHelper.toString(listItem.get(0)), ImportHelper.toString(listItem.get(1)), ImportHelper.toString(listItem.get(2)),
-                     ImportHelper.toBoolean(listItem.get(3)), ImportHelper.toString(listItem.get(3)), ImportHelper.toString(listItem.get(4)),
-                     ImportHelper.toString(listItem.get(5)), ImportHelper.toString(listItem.get(6)), ImportHelper.toInstant(listItem.get(7))));
+                     ImportHelper.toBoolean(listItem.get(3)), ImportHelper.toString(listItem.get(4)), ImportHelper.toString(listItem.get(5)),
+                     ImportHelper.toString(listItem.get(6)), ImportHelper.toString(listItem.get(7)), ImportHelper.toLocalDateTime(listItem.get(8))));
         }
         return returnVal;
     }

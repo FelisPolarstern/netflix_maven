@@ -1,7 +1,6 @@
 package de.felis.masterarbeit.in.reader;
 
 import de.felis.masterarbeit.in.model.IpAdressesLoginIn;
-import de.felis.masterarbeit.in.model.IpAdressesStreamingIn;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -14,7 +13,7 @@ public class IpAdressesLoginReader {
 
         for (List<String> listItem : content) {
             returnVal.add(new IpAdressesLoginIn(ImportHelper.toString(listItem.get(0)), ImportHelper.toString(listItem.get(1)), ImportHelper.toString(listItem.get(2)),
-                    ImportHelper.toString(listItem.get(3)), ImportHelper.toInstant(listItem.get(4))));
+                    ImportHelper.toString(listItem.get(3)), ImportHelper.toString(listItem.get(4)), ImportHelper.toLocalDateTime(listItem.get(5))));
         }
         return returnVal;
     }

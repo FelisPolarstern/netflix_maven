@@ -1,14 +1,17 @@
 package de.felis.masterarbeit.in.reader;
 
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVRecord;
+
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.text.ParseException;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -23,7 +26,7 @@ public class ImportHelper {
         return fmt;
     }
 
-    public static List<List<String>> readCsvFile(String path) throws IOException {
+    public static List<List<String>> readCsvFileWithJava(String path) throws IOException {
         List<String> lines = Files.readAllLines(Paths.get(path));
         String firstLine = lines.remove(0); //Spaltenüberschriften werden gelöscht und in der firstLine aufgefangen
         int headerLen = firstLine.split(",").length; //Anzahl der Spalten
@@ -42,6 +45,17 @@ public class ImportHelper {
             data.add(currentLine);
         }
         return data;
+    }
+
+    public static List<List<String>> readCsvFile(String path) throws IOException {
+        Reader in = new FileReader(path);
+        Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(in);
+        List<List<String>> input = new ArrayList<>();
+        for (CSVRecord record : records) {
+            input.add(record.toList());
+        }
+        input.remove(0); //Löscht die erste Zeile mit den Überschriften
+        return input;
     }
 
     public static List<String> readFileOld(String path, int limit) throws IOException {
@@ -77,12 +91,20 @@ public class ImportHelper {
         }
         return input;
     }
-    static public Integer toInt(String input){
+    static public Integer toInteger(String input){
         if(input.isEmpty()){
             return null;
         }
         return(Integer.valueOf(input));
     }
+
+    static public Float toFloat(String input){
+        if(input.isEmpty()){
+            return null;
+        }
+        return(Float.valueOf(input));
+    }
+
     static public Instant toInstant(String input){
         if(input.isEmpty()){
             return null;
@@ -114,6 +136,9 @@ public class ImportHelper {
     }
 
     static public LocalDateTime toLocalDateTime(String input){
+        if(input.isEmpty()){
+            return null;
+        }
         if(input.matches("\\d\\d\\d\\d-\\d\\d-\\d\\d \\d\\d:\\d\\d:\\d\\d")){
             input = input.replaceAll(" ", "T");
         }

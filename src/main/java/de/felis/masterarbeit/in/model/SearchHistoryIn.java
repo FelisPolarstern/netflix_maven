@@ -1,6 +1,8 @@
 package de.felis.masterarbeit.in.model;
 
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class SearchHistoryIn {
     private final String profileName;
@@ -11,9 +13,9 @@ public class SearchHistoryIn {
     private final String displayedName;
     private final String action;
     private final String section;
-    private final Instant utcTimestamp;
+    private final LocalDateTime utcTimestamp;
 
-    public SearchHistoryIn(String profileName, String countryIsoCode, String device, boolean isKids, String queryTyped, String displayedName, String action, String section, Instant utcTimestamp) {
+    public SearchHistoryIn(String profileName, String countryIsoCode, String device, boolean isKids, String queryTyped, String displayedName, String action, String section, LocalDateTime utcTimestamp) {
         this.profileName = profileName;
         this.countryIsoCode = countryIsoCode;
         this.device = device;
