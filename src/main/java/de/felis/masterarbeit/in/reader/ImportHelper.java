@@ -47,6 +47,8 @@ public class ImportHelper {
         return data;
     }
 
+    /*Dies ist ein sinnloser Kommentar*/
+
     public static List<List<String>> readCsvFile(String path) throws IOException {
         Reader in = new FileReader(path);
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(in);
