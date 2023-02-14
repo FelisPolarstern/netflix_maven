@@ -177,8 +177,10 @@ public class ImportHelper {
         if(input.matches("[a-zA-Z]+")){
             return null;
         }
-        CharSequence inputChars = input;
-        return Duration.parse(inputChars);
+        String[] inputsplit = input.split(":");
+        Float secondstotal = Float.valueOf(inputsplit[0]) * 3600 + Float.valueOf(inputsplit[1]) * 60 + Float.valueOf(inputsplit[2]);
+        CharSequence output = "PT" + secondstotal + "S";
+        return Duration.parse(output);
     }
 }
 
