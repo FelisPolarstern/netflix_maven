@@ -15,9 +15,9 @@ public class ViewingActivityReader {
         for (List<String> listItem : content) {
             returnVal.add(new ViewingActivityIn(
                             ImportHelper.toString(listItem.get(0)), ImportHelper.toLocalDateTime(listItem.get(1)), ImportHelper.toDuration(listItem.get(2)),
-                            ImportHelper.toString(listItem.get(3)), ImportHelper.toString(listItem.get(3)), ImportHelper.toString(listItem.get(4)),
-                            ImportHelper.toString(listItem.get(5)), ImportHelper.toDuration(listItem.get(6)), ImportHelper.toDuration(listItem.get(7)),
-                            ImportHelper.toString(listItem.get(8))));
+                            ImportHelper.toString(listItem.get(3)), ImportHelper.toString(listItem.get(4)), ImportHelper.toString(listItem.get(5)),
+                            ImportHelper.toString(listItem.get(6)), ImportHelper.toDuration(listItem.get(7)), ImportHelper.toDuration(listItem.get(8)),
+                            ImportHelper.toString(listItem.get(9))));
         }
         return returnVal;}
 }

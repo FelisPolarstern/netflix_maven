@@ -174,13 +174,12 @@ public class ImportHelper {
     }
 
     static public Duration toDuration (String input){
-        if(input.matches("[a-zA-Z]+")){
+        if(!input.matches("[0-9]*")){
             return null;
         }
-        String[] inputsplit = input.split(":");
-        Float secondstotal = Float.valueOf(inputsplit[0]) * 3600 + Float.valueOf(inputsplit[1]) * 60 + Float.valueOf(inputsplit[2]);
-        CharSequence output = "PT" + secondstotal + "S";
-        return Duration.parse(output);
+        String[] inputSplit = input.split(":");
+        double secondsTotal = Double.valueOf(inputSplit[0]) * 3600 + Double.valueOf(inputSplit[1]) * 60 + Double.valueOf(inputSplit[2]);
+        return Duration.ofMillis((long) (secondsTotal*1000)); //Wandle secondsTotal in Millisekunden um, und parse das in eine Duration
     }
 }
 
