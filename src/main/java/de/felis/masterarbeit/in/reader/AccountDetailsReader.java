@@ -38,10 +38,11 @@ public class AccountDetailsReader {
             boolean whatsApp = ImportHelper.toBoolean(listitem.get(20));
             boolean marketingCommunicationsMatchedIdentifiers = ImportHelper.toBoolean(listitem.get(21));
             boolean extraMemberAccount = ImportHelper.toBoolean(listitem.get(22));
+            boolean extraMemberPrimaryAccountOwner = ImportHelper.toBoolean(listitem.get(23));
 
             returnVal.add(new AccountDetailsIn(firstName, lastName, emailAdress, phoneNumber, countryOfRegistration, countryOfSignup, primaryLang,cookieDisclosure, membershipStatus,
                     customerCreationTimestamp, profileTranserSetting, hasRejoined, netflixUpadate, nowOnNetflix, netflixOffers, netflixSurveys, netflixKidsAndFamiliy,
-                    smsAccountRelated, smsComtentUpdatesAndSpecialOffers, testParticipation, whatsApp, marketingCommunicationsMatchedIdentifiers, extraMemberAccount));
+                    smsAccountRelated, smsComtentUpdatesAndSpecialOffers, testParticipation, whatsApp, marketingCommunicationsMatchedIdentifiers, extraMemberAccount, extraMemberPrimaryAccountOwner));
         }
 
         return returnVal;

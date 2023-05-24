@@ -17,4 +17,24 @@ public class IndicatedPreferencesIn {
         this.isInterested = isInterested;
         this.eventDate = eventDate;
     }
+
+    public String getProfileName() {
+        return profileName;
+    }
+
+    public String getShow() {
+        return show;
+    }
+
+    public boolean isHasWatched() {
+        return hasWatched;
+    }
+
+    public boolean isInterested() {
+        return isInterested;
+    }
+
+    public LocalDate getEventDate() {
+        return eventDate;
+    }
 }

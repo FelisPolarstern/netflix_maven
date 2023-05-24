@@ -15,4 +15,20 @@ public class MyListIn {
         this.country = country;
         this.utcTitleAddDate = utcTitleAddDate;
     }
+
+    public String getProfileName() {
+        return profileName;
+    }
+
+    public String getTitleName() {
+        return titleName;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public LocalDate getUtcTitleAddDate() {
+        return utcTitleAddDate;
+    }
 }
