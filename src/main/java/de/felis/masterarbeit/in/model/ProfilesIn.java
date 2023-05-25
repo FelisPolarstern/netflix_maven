@@ -1,16 +1,12 @@
 package de.felis.masterarbeit.in.model;
 
 import java.time.Instant;
-//TODO Readerklasse
 public class ProfilesIn {
     private final String profileName;
     private final String emailAdress;
-    private final Instant profileCreationTime; //TODO ist das der richtige Datentyp?
-
+    private final Instant profileCreationTime;
     private final int maturityLevel;
-
     private final boolean hasAutoPlayback;
-
     private final String maxStramWuality;
     private final boolean profileTransfered;
     private final Instant profileTransferTime;

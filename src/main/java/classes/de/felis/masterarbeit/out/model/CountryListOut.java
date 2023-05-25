@@ -1,6 +1,5 @@
-package de.felis.masterarbeit.in.modelOut;
+package classes.de.felis.masterarbeit.out.model;
 
-import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 

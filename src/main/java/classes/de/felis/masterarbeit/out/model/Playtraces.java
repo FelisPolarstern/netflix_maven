@@ -1,4 +1,4 @@
-package de.felis.masterarbeit.in.modelOut;
+package classes.de.felis.masterarbeit.out.model;
 
 public class Playtraces {
     //TODO brauchen die eine ID?
