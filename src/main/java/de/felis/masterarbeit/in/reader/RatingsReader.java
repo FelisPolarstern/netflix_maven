@@ -3,7 +3,6 @@ package de.felis.masterarbeit.in.reader;
 import de.felis.masterarbeit.in.model.RatingsIn;
 
 import java.io.IOException;
-import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -12,7 +11,7 @@ import java.util.List;
 public class RatingsReader {
 
     public static List<RatingsIn> readRatings(String path) throws IOException {
-        List<List<String>>  content = ImportHelper.readCsvFile(path);
+        List<List<String>>  content = ImportHelper.readCsvFileForNetflixData(path);
         List<RatingsIn> returnVal = new ArrayList<>();
 
         for(List<String> listitem: content){

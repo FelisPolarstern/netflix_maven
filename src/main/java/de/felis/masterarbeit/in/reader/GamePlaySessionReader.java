@@ -1,6 +1,5 @@
 package de.felis.masterarbeit.in.reader;
 
-import de.felis.masterarbeit.in.model.DeviceIn;
 import de.felis.masterarbeit.in.model.GamePlaySessionIn;
 
 import java.io.IOException;
@@ -10,7 +9,7 @@ import java.util.List;
 
 public class GamePlaySessionReader {
     public static List<GamePlaySessionIn> readGamePlaySession(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);  //Inhalt der Datei wird geladen
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);  //Inhalt der Datei wird geladen
         List<GamePlaySessionIn> returnVal = new ArrayList<>();
 
         for (List<String> listitem : content) {

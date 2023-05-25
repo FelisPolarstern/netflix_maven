@@ -26,7 +26,7 @@ public class Main {
         List<SubscriptionHistoryIn> testSubscriptionHistory = SubstriptionHistoryReader.readSubscriptionHistoryLis(pathMacMini + "ACCOUNT/SubscriptionHistory.csv");
         List <TermsOfUseIn> termsofUseTest = TermsOfUseReader.readSubscriptionDetails(pathMacMini + "/ACCOUNT/TermsOfUse.csv");
         List <ViewingActivityIn> testVieweingActivity = ViewingActivityReader.readSearchHistory(pathMacMini + "CONTENT_INTERACTION/ViewingActivity.csv");
-
+        List<CountryIn> testCountryIn = CountryReader.readCountryIn("../Daten/Countries.csv");
 
 
 

@@ -27,7 +27,7 @@ public class AccountDetailsIn {
     private final boolean whatsapp;
     private final boolean marketingCommunicationsMatchedIdentifiers;
     private final boolean extraMemberAccount;
-    private boolean extraMemberPrimaryAccountOwner;
+    private Boolean extraMemberPrimaryAccountOwner;
 
     public AccountDetailsIn(String first_name, String lastName, String emailAddress, String phone_Number, String country_of_registration,
                             String country_of_signup, String primary_lang, boolean cookie_disclosure, String membership_status,
@@ -35,7 +35,7 @@ public class AccountDetailsIn {
                             boolean netflix_updates, boolean now_on_netflix, boolean netflix_offers, boolean netflix_surveys,
                             boolean netflix_kids_and_family, boolean sms_account_related, boolean sms_content_updates_and_special_offers,
                             boolean test_participation, boolean whats_app, boolean marketing_communications_matched_identifiers, boolean extra_member_account,
-                            boolean extraMemberPrimaryAccountOwner) {
+                            Boolean extraMemberPrimaryAccountOwner) {
         this.firstName = first_name;
         this.lastName = lastName;
         this.emailAddress = emailAddress;

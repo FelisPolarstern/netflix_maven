@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BillingHistoryReader {
     public static List<BillingHistoryIn> readIpAdressesStreaming(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);
         List<BillingHistoryIn> returnVal = new ArrayList<>();
 
         for (List<String> listItem : content) {

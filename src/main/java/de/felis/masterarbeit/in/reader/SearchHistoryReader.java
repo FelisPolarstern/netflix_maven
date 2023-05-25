@@ -1,6 +1,5 @@
 package de.felis.masterarbeit.in.reader;
 
-import de.felis.masterarbeit.in.model.IndicatedPreferencesIn;
 import de.felis.masterarbeit.in.model.SearchHistoryIn;
 
 import java.io.IOException;
@@ -10,7 +9,7 @@ import java.util.List;
 public class SearchHistoryReader {
 
     public static List<SearchHistoryIn> readSearchHistory(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);
         List<SearchHistoryIn> returnVal = new ArrayList<>();
 
         for (List<String> listItem : content) {

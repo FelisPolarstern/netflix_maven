@@ -1,18 +1,16 @@
 package de.felis.masterarbeit.in.reader;
 
-import de.felis.masterarbeit.in.model.GamePlaySessionIn;
 import de.felis.masterarbeit.in.model.ProfilesIn;
 
 import java.io.IOException;
 import java.time.Instant;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProfilesReader {
 
     public static List<ProfilesIn> readGamePlaySession(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);  //Inhalt der Datei wird geladen
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);  //Inhalt der Datei wird geladen
         List<ProfilesIn> returnVal = new ArrayList<>();
 
         /*

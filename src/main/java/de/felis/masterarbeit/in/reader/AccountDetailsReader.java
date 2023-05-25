@@ -1,7 +1,6 @@
 package de.felis.masterarbeit.in.reader;
 
 import de.felis.masterarbeit.in.model.AccountDetailsIn;
-import de.felis.masterarbeit.in.model.DeviceIn;
 
 import java.io.IOException;
 import java.time.Instant;
@@ -11,7 +10,7 @@ import java.util.List;
 public class AccountDetailsReader {
     // public static List<DeviceIn> readDeviceList(String path) throws IOException
     public static List<AccountDetailsIn> readAccountDetailsList(String path) throws IOException{
-        List<List<String>>  content = ImportHelper.readCsvFile(path);
+        List<List<String>>  content = ImportHelper.readCsvFileForNetflixData(path);
         List<AccountDetailsIn> returnVal = new ArrayList<>();
 
         for(List<String> listitem: content){
@@ -38,7 +37,7 @@ public class AccountDetailsReader {
             boolean whatsApp = ImportHelper.toBoolean(listitem.get(20));
             boolean marketingCommunicationsMatchedIdentifiers = ImportHelper.toBoolean(listitem.get(21));
             boolean extraMemberAccount = ImportHelper.toBoolean(listitem.get(22));
-            boolean extraMemberPrimaryAccountOwner = ImportHelper.toBoolean(listitem.get(23));
+            Boolean extraMemberPrimaryAccountOwner = ImportHelper.toBoolean(listitem.get(23));
 
             returnVal.add(new AccountDetailsIn(firstName, lastName, emailAdress, phoneNumber, countryOfRegistration, countryOfSignup, primaryLang,cookieDisclosure, membershipStatus,
                     customerCreationTimestamp, profileTranserSetting, hasRejoined, netflixUpadate, nowOnNetflix, netflixOffers, netflixSurveys, netflixKidsAndFamiliy,

@@ -1,6 +1,5 @@
 package de.felis.masterarbeit.in.reader;
 
-import de.felis.masterarbeit.in.model.InteractiveTitleIn;
 import de.felis.masterarbeit.in.model.MyListIn;
 
 import java.io.IOException;
@@ -9,7 +8,7 @@ import java.util.List;
 
 public class MyListReader {
     public static List<MyListIn> readmyList(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);
         List<MyListIn> returnVal = new ArrayList<>();
 
         for (List<String> listItem : content) {

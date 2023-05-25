@@ -8,7 +8,7 @@ import java.util.List;
 
 public class IpAdressesLoginReader {
     public static List<IpAdressesLoginIn> readIpAdressesLogin(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);
         List<IpAdressesLoginIn> returnVal = new ArrayList<>();
 
         for (List<String> listItem : content) {

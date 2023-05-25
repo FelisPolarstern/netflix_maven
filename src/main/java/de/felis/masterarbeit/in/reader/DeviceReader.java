@@ -11,7 +11,7 @@ import java.util.List;
 public class DeviceReader {
 
     public static List<DeviceIn> readDeviceList(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);  //Inhalt der Datei wird geladen
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);  //Inhalt der Datei wird geladen
         List<DeviceIn> returnVal = new ArrayList<>();
 
         for(List<String> listitem: content){

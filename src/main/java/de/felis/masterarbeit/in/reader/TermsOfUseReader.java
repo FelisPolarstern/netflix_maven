@@ -1,7 +1,5 @@
 package de.felis.masterarbeit.in.reader;
 
-import de.felis.masterarbeit.in.model.AccountDetailsIn;
-import de.felis.masterarbeit.in.model.SubscriptionHistoryIn;
 import de.felis.masterarbeit.in.model.TermsOfUseIn;
 
 import java.io.IOException;
@@ -11,7 +9,7 @@ import java.util.List;
 public class TermsOfUseReader {
 
     public static List<TermsOfUseIn> readSubscriptionDetails(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);
         List<TermsOfUseIn> returnVal = new ArrayList<>();
 
         for (List<String> listitem : content) {

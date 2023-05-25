@@ -9,7 +9,7 @@ import java.util.List;
 public class IndicatedPreferencesReader {
 
     public static List<IndicatedPreferencesIn> readSubscriptionHistoryLis(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);
         List<IndicatedPreferencesIn> returnVal = new ArrayList<>();
 
         for (List<String> listItem : content) {

@@ -25,7 +25,7 @@ public class AccountDetailsOut {
     private final boolean whats_app;
     private final boolean marketing_communications_matched_identifiers;
     private final boolean extra_member_account;
-    private final boolean extra_member_primary_account_owner;
+    private final Boolean extra_member_primary_account_owner;
     //TODO wie adde ich das zu der Liste an Länder?
 
 
@@ -33,7 +33,7 @@ public class AccountDetailsOut {
                              String primary_lang, boolean cookie_disclosure, String membership_status, Instant customer_creation_timeStamp, boolean profile_transfer_setting,
                              boolean has_rejoinded, boolean netflix_updates, boolean now_on_netflix, boolean netflix_offers, boolean netflix_surveys,
                              boolean netflix_kids_and_family, boolean sms_account_related, boolean sms_content_updates_and_special_offers, boolean test_participation,
-                             boolean whats_app, boolean marketing_communications_matched_identifiers, boolean extra_member_account, boolean extraMemberPrimaryAccountOwner) {
+                             boolean whats_app, boolean marketing_communications_matched_identifiers, boolean extra_member_account, Boolean extraMemberPrimaryAccountOwner) {
         this.email_address = email_address;
         this.phone_Number = phone_Number;
         this.primary_lang = primary_lang;

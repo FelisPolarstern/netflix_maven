@@ -9,7 +9,7 @@ import java.util.List;
 public class InteractiveTitleReader {
 
     public static List<InteractiveTitleIn> readInteractiveTitle(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);
         List<InteractiveTitleIn> returnVal = new ArrayList<>();
         for (List<String> listItem : content) {
             returnVal.add(new InteractiveTitleIn(ImportHelper.toString(listItem.get(0)), ImportHelper.toString(listItem.get(1)), ImportHelper.toString(listItem.get(2)),

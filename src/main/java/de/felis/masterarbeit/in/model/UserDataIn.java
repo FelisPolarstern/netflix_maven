@@ -28,7 +28,7 @@ public class UserDataIn {
     public UserDataIn(String path) throws IOException {
 
         //Todo Out Klassen schreiben, danach eine Mapper Klasse, die die Daten von einem zum anderen Überträgt, Logik des Übertragens aus den Out Klasen raus, Die Klassen händelt der Mapper
-        this.acountDetailsIn = AccountDetailsReader.readAccountDetailsList(path + "ACCOUNT/AccountDetails.csv");;
+        this.acountDetailsIn = AccountDetailsReader.readAccountDetailsList(path + "ACCOUNT/AccountDetails.csv");
         this.billingHistoryIn = BillingHistoryReader.readIpAdressesStreaming(path + "PAYMENT_AND_BILLING/BillingHistory.csv");
         this.clickstreamIn = ClickstreamReader.readClickstream(path + "CLICKSTREAM/Clickstream.csv");
         this.deviceIn = DeviceReader.readDeviceList (path + "DEVICES/Devices.csv");

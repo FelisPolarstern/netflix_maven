@@ -9,7 +9,7 @@ import java.util.List;
 public class SubstriptionHistoryReader {
 
     public static List<SubscriptionHistoryIn> readSubscriptionHistoryLis(String path) throws IOException{
-        List<List<String>> content = ImportHelper.readCsvFile(path);
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);
         List<SubscriptionHistoryIn> returnVal = new ArrayList<>();
 
         for(List<String> listItem: content){

@@ -8,7 +8,7 @@ import java.util.List;
 
 public class PlaybackRelatedEventsReader {
     public static List<PlaybackRelatedEventsIn> readPlaybackRelatedEvents(String path) throws IOException {
-        List<List<String>> content = ImportHelper.readCsvFile(path);
+        List<List<String>> content = ImportHelper.readCsvFileForNetflixData(path);
         List<PlaybackRelatedEventsIn> returnVal = new ArrayList<>();
 
         for (List<String> listItem : content) {

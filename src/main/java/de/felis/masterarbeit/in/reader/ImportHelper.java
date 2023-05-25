@@ -47,9 +47,7 @@ public class ImportHelper {
         return data;
     }
 
-    /*Dies ist ein sinnloser Kommentar*/
-
-    public static List<List<String>> readCsvFile(String path) throws IOException {
+    public static List<List<String>> readCsvFileForNetflixData(String path) throws IOException {
         Reader in = new FileReader(path);
         Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(in);
         List<List<String>> input = new ArrayList<>();
@@ -57,6 +55,16 @@ public class ImportHelper {
             input.add(record.toList());
         }
         input.remove(0); //Löscht die erste Zeile mit den Überschriften
+        return input;
+    }
+
+    public static List<List<String>> readCsvFileForCountry(String path) throws IOException {
+        Reader in = new FileReader(path);
+        Iterable<CSVRecord> records = CSVFormat.DEFAULT.parse(in);
+        List<List<String>> input = new ArrayList<>();
+        for (CSVRecord record : records) {
+            input.add(record.toList());
+        }
         return input;
     }
 
